@@ -1,6 +1,7 @@
 #include "header.h"
 
 
+
 int main(){
 
     int arraySize;
@@ -11,6 +12,7 @@ int main(){
     heapArrayTest(initArray);
 
     stackArrayTest(initArray);
+    vectorArrayTest(initArray);
 
     //heapArrayTest(initArray);
 

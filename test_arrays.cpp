@@ -2,6 +2,7 @@
 
 
 vector<int> initializeArray(int arraySize){
+    srand( time(0) );
     vector<int>  array(arraySize);
     for (int i=0; i < arraySize; i++) {
         array[i] = rand()% 10 +1;
@@ -16,16 +17,14 @@ void heapArrayTest(vector<int> &inp){
 
     int *heapArray = new int[arraySize];
 
-
-    for (int i=0; i < arraySize; i++) {
-        heapArray[i] = inp[i];
-    }
-
     cout << "Массив с использованием кучи \n";
 
     for (int i=0; i < arraySize; i++) {
+        heapArray[i] = inp[i];
         cout << *(heapArray + i) << '\n';
     }
+
+
 
 
     /* тест ссылки
@@ -43,14 +42,43 @@ void stackArrayTest(vector<int> &inp){
     int arraySize = inp.size();
     int stackArray[arraySize];
 
-    for(int i=0; i < arraySize; i++){
-        stackArray[i] = inp[i];
-    }
-
     cout << "Массив с использованием стека \n";
 
     for(int i=0; i < arraySize; i++){
+        stackArray[i] = inp[i];
         cout << stackArray[i] << '\n';
+    }
+
+
+
+
+
+
+}
+
+void vectorArrayTest(vector<int> &inp){
+    int arraySize = inp.size();
+    vector<int> vectorArray(arraySize);
+
+    cout << "Массив с использованием вектора \n";
+
+    for(int i=0; i < arraySize; i++){
+        vectorArray[i] = inp[i];
+        cout << vectorArray[i] << '\n';
+    }
+
+
+}
+
+void listArrayTest(vector<int> &inp){
+    int arraySize = inp.size();
+    vector<int> vectorArray(arraySize);
+
+    cout << "Массив с использованием вектора \n";
+
+    for(int i=0; i < arraySize; i++){
+        vectorArray[i] = inp[i];
+        cout << vectorArray[i] << '\n';
     }
 
 
