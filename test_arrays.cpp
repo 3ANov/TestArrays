@@ -2,7 +2,7 @@
 
 
 vector<int> initializeArray(int arraySize){
-    vector<int> array(arraySize);
+    vector<int>  array(arraySize);
     for (int i=0; i < arraySize; i++) {
         array[i] = rand()% 10 +1;
     }
@@ -21,6 +21,8 @@ void heapArrayTest(vector<int> &inp){
         heapArray[i] = inp[i];
     }
 
+    cout << "Массив с использованием кучи \n";
+
     for (int i=0; i < arraySize; i++) {
         cout << *(heapArray + i) << '\n';
     }
@@ -34,5 +36,22 @@ void heapArrayTest(vector<int> &inp){
 
     delete[] heapArray;       // память освобождается
     heapArray = nullptr;
+
+}
+
+void stackArrayTest(vector<int> &inp){
+    int arraySize = inp.size();
+    int stackArray[arraySize];
+
+    for(int i=0; i < arraySize; i++){
+        stackArray[i] = inp[i];
+    }
+
+    cout << "Массив с использованием стека \n";
+
+    for(int i=0; i < arraySize; i++){
+        cout << stackArray[i] << '\n';
+    }
+
 
 }
