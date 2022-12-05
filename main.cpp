@@ -33,6 +33,8 @@ int main(){
 
 
     srand( time(0) );
+    
+    
 
 
     int stackMatrix[matrixSize][matrixSize];
